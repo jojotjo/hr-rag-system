@@ -135,30 +135,38 @@ Open browser at: `http://localhost:8501`
 
 ## 💬 Example Conversations
 
-**Question:** What are the working hours?
-Answer: The Institute timings are from 9:00 am to 5:45 pm
-(Monday to Friday) with a 15-minute grace period in the morning.
-Sources:
-📄 hr-policy.pdf — Page 6
-📄 HR Policy Manual 2023.pdf — Page 78
+---
 
-**Question:** What is the sick leave policy?
-Answer: Employers must provide at least 24 hours or three days
-of paid sick leave per year. Employees accrue one hour of paid
-sick leave for every 30 hours worked.
-Sources:
-📄 Employee-Handbook.pdf — Page 38
+**💬 Q: What are the working hours?**
 
-**Question:** What is the work from home policy?
-Answer: You can occasionally work from home (WFH), normally
-one day per week. Inform your manager at least two days in advance.
-Sources:
-📄 Employee-Handbook.pdf — Page 23
-📄 HR Policy Manual 2023.pdf — Page 9
+> 🤖 The Institute timings are from 9:00 am to 5:45 pm (Monday to Friday) with a 15-minute grace period in the morning.
+
+📎 Sources:
+- 📄 `hr-policy.pdf` — Page 6
+- 📄 `HR Policy Manual 2023.pdf` — Page 78
 
 ---
 
+**💬 Q: What is the sick leave policy?**
+
+> 🤖 Employers must provide at least 24 hours or three days of paid sick leave per year. Employees accrue one hour of paid sick leave for every 30 hours worked.
+
+📎 Sources:
+- 📄 `Employee-Handbook.pdf` — Page 38
+
+---
+
+**💬 Q: What is the work from home policy?**
+
+> 🤖 You can occasionally work from home (WFH), normally one day per week. Inform your manager at least two days in advance.
+
+📎 Sources:
+- 📄 `Employee-Handbook.pdf` — Page 23
+- 📄 `HR Policy Manual 2023.pdf` — Page 9
+---
+
 ## 📁 Project Structure
+```
 hr-rag-system/
 ├── data/                    ← HR PDF documents (add your own)
 ├── chroma_db/               ← Vector store (auto-generated)
@@ -168,7 +176,7 @@ hr-rag-system/
 ├── .env                     ← API keys (never uploaded)
 ├── .gitignore               ← Git ignore rules
 └── README.md                ← This file
-
+```
 ---
 
 ## 🔑 Key Design Decisions
