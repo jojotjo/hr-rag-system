@@ -89,7 +89,7 @@ with source citations — without hallucinating information.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/hr-rag-system.git
+git clone https://github.com/jojotjo/hr-rag-system.git
 cd hr-rag-system
 ```
 
@@ -105,9 +105,16 @@ pip install -r requirements.txt
 ```
 
 ### 4. Set up Groq API key
-Create a `.env` file in root folder:
+
+Create a `.env` file in the root folder:
+
+```env
 GROQ_API_KEY=your_groq_api_key_here
-Get your free API key at: https://console.groq.com
+```
+
+> 🔑 Get your free API key at: [https://console.groq.com](https://console.groq.com)
+
+> ⚠️ Never share your `.env` file or push it to GitHub
 
 ### 5. Add HR PDF files
 Place your HR PDF documents inside the `data/` folder.
