@@ -48,31 +48,28 @@ with source citations — without hallucinating information.
 
 ## 🏗️ Architecture
 
-Ingestion Pipeline
-PDF Files
-   ↓
-Extract Text
-   ↓
-Chunk Text (500 words, 50 overlap)
-   ↓
-Generate Embeddings
-   ↓
-Store in ChromaDB
+### 📥 Ingestion Pipeline
 
-Retrieval + Generation
-User Query
-   ↓
-Embed Query
-   ↓
-Cosine Similarity Search
-   ↓
-Retrieve Top-K Chunks
-   ↓
-Build Context
-   ↓
-LLM Generation
-   ↓
-Answer + Source Citation
+| Step | Process |
+|------|---------|
+| 1 | 📄 Load PDF Files from `data/` folder |
+| 2 | 📝 Extract Text from each page |
+| 3 | ✂️ Chunk Text (500 words, 50 word overlap) |
+| 4 | 🔢 Generate Embeddings (MiniLM model) |
+| 5 | 💾 Store Vectors in ChromaDB |
+
+### 🔍 Retrieval + Generation
+
+| Step | Process |
+|------|---------|
+| 1 | ❓ User submits a Question |
+| 2 | 🔢 Embed Query using same model |
+| 3 | 🔍 Cosine Similarity Search in ChromaDB |
+| 4 | 📦 Retrieve Top-K most relevant Chunks |
+| 5 | 📋 Build Context from retrieved chunks |
+| 6 | 🤖 LLM generates Answer using Context |
+| 7 | 📎 Return Answer + Source Citations |
+
 
 ---
 
