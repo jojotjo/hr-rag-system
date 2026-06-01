@@ -7,7 +7,7 @@ An AI-powered Question & Answering system for HR documents built using
 
 ## 🖼️ Demo
 
-![HR Assistant UI](demo.png)
+![HR Assistant UI](assets/demo.png)
 
 ---
 
