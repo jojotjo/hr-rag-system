@@ -48,23 +48,31 @@ with source citations — without hallucinating information.
 
 ## 🏗️ Architecture
 
+Ingestion Pipeline
+PDF Files
+   ↓
+Extract Text
+   ↓
+Chunk Text (500 words, 50 overlap)
+   ↓
+Generate Embeddings
+   ↓
+Store in ChromaDB
 
-┌─────────────────────────────────────────────────────────┐
-│                   INGESTION PIPELINE                     │
-│                                                          │
-│  PDF Files → Extract Text → Chunk (500 words, 50 overlap)│
-│           → Generate Embeddings → Store in ChromaDB      │
-└─────────────────────────────────────────────────────────┘
-│
-▼
-┌─────────────────────────────────────────────────────────┐
-│                RETRIEVAL + GENERATION                    │
-│                                                          │
-│  User Query → Embed Query → Cosine Similarity Search     │
-│           → Retrieve Top K Chunks → Build Context        │
-│           → LLM Generation → Answer + Source Citation    │
-└─────────────────────────────────────────────────────────┘
-
+Retrieval + Generation
+User Query
+   ↓
+Embed Query
+   ↓
+Cosine Similarity Search
+   ↓
+Retrieve Top-K Chunks
+   ↓
+Build Context
+   ↓
+LLM Generation
+   ↓
+Answer + Source Citation
 
 ---
 
